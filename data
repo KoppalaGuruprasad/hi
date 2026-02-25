@@ -1,0 +1,110 @@
+PING
+
+ping google.com - checks whether your system is connected to Google server or not
+ to exit ping use "ctrl + c"
+ping -c 4 gloogle.com - it prints 4 packets they stop
+
+ip/ifconfig -it shows ip address,mac address (modern linux uses "ip") 
+
+netstat - it shows network statistics ( like connection,ports)
+netstat -a - shows all connections
+netstat -tuln - it shows listening ports
+       t - tcp ,u - udp , l - listening , n - numeric addresses
+
+ss - used to faster replacement for netstat
+ss -a - shows all connections
+ss -tuln - shows listening ports
+
+curl - used to send http request and access apis
+curl -o https://example.com/hello.txt - to download file 
+curl -X POST https://example.com/hello - send post request
+
+wget 
+
+wget url - download files from the internet
+wget -b url -download in background
+wget -c url resumes itterupted downloads
+
+scp 
+scp used to transer files between systems using ssh
+
+scp a.txt user@192.168.1.10:/home/user/ - used to copy file to remote server
+
+ssh 
+
+ssh used to access remote login
+ssh guru@192.168.1.10 - then enter psw then u will get remote access.
+ssh guru@192.168.1.10 "ls -l" - run commands on remote server
+
+
+EVN
+
+evn  shows alll environment variables in the system
+
+echo $home - we usednecho to check specific variable
+
+export name=guru - used to create or modify environment variable
+echo $name - to check variable
+
+uname
+
+uname is used to display system and kernal information
+uname -a - show all system information
+uname -r - shows kernal version
+uname -m - machine architecture
+uname -s - os name
+
+hostname -it shpws server name in the network
+sudo hostname newserver - used to change host name temporary
+whoami - used to show current logged -in user
+who - used to show all users currently login into the system
+uptime - shows how long the system has been running snice last time the system was started
+date - shows date and time
+date "+%Y-%m-%d" - custom date format(shows date only)
+date "+%H-%M-%s" - shows time only
+
+history - shows list of commands previously executed in the terminal
+!4 - run previous command using history number
+!! - run last command again
+history -c - clear history
+history > commands.txt - save history to file
+
+alias 
+alias name='guruprasad' - it used to create short name for a long command now u can use name where u use guruprasad
+alias - used to view all alias
+unalias alias_name - removes an alias command
+unalias -a - used to remove all alias
+which python - shows the path of a command executable
+whereis python-used to show location of binary,source code
+
+clear used to clears the terminal screen 
+ctrl + L =it is a shortcut
+exit - it closes the current terminal 
+
+
+> - redirects the output of a command to a file (if file already exist it overwrites the content
+ls > hello.txt - it saves the output of "ls" into files.txt
+
+*
+>> - used to add output to the end of the file instead of replacing it
+echo "first line" > file.txt - 
+*
+
+< - it sends input fron a file to a command 
+command < hello.txt
+wc -l < hello.txt - it counts lines from the file
+| - this is pipe used to send output of ond command as a input of another command
+ls | wc -l  - means ls is list files and wc -l is counts them
+
+2> - it redirects error messages to a file
+ls wrongfile 2> hello.txt - instead of displaying the error it shows hello.txt
+
+& -runs a command in background 
+sleep 100 & - it runs background
+
+cal - used to display calender in terminal
+cal 2 2026 - it shows 2 nd moth calender of 2026 in terminal
+cal 2026 - it shows all 12 months on that year
+cal -3 - it shows 3 months calender
+cal -m - to start with monday (default it contains sunday)
+cal -v - it shows vertical calender
