@@ -9,7 +9,8 @@ ip/ifconfig -it shows ip address,mac address (modern linux uses "ip")
 netstat - it shows network statistics ( like connection,ports)
 netstat -a - shows all connections
 netstat -tuln - it shows listening ports
-       t - tcp ,u - udp , l - listening , n - numeric addresses
+       t - tcp ,u - udp , l - listening , n - numeric addresses 
+     note : it shows sometimes Windows networking tools 
 
 ss - used to faster replacement for netstat
 ss -a - shows all connections
